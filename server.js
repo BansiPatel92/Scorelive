@@ -8,7 +8,7 @@ var $ = require("jquery");
 var app = express();
 
 // app.use(bodyParser.json()); 
-var port = process.env.PORT;
+var port = process.env.PORT || 5000;
 app.get('/', function(req, res){
     res.send("App started!");
 });
