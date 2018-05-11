@@ -1,5 +1,5 @@
 
-
+// process.env.NODE_ENV = process.env.NODE_ENV;
 var express = require('express');
 var fs = require('fs');
 var request = require('request');
@@ -8,7 +8,7 @@ var $ = require("jquery");
 var app = express();
 
 // app.use(bodyParser.json()); 
-var port = 5000;
+var port = process.env.PORT;
 app.get('/', function(req, res){
     res.send("App started!");
 });
@@ -59,4 +59,4 @@ app.get('/scrape', function(req, res){
 })
 
 app.listen(port);
-// console.log('Server running at http://localhost:5000');
+console.log('Server running at http://localhost:'+ process.env.PORT);
