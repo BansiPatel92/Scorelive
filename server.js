@@ -11,7 +11,7 @@ var app = express();
 var port = 5000;
 app.get('/', function(req, res){
     res.send("App started!");
-}
+});
 app.get('/scrape', function(req, res){
 	var url = 'http://www.licescore.com/soccer/live/';
 
